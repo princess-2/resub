@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("http://i.imgur.com/i6fPoPF.jpg");
+
+}
+.second{
+  background-image: url("http://i.imgur.com/ySpzrso.jpg");
+
+}
+.dessert{
+  background-image: url("http://i.imgur.com/ScKbDc9.jpg");
+
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+<TITLE>Mc-Donalds</TITLE>
+
+</head>
+
+<body>
+<h1> Mc-Donalds</h1>
+<h2>It's delicious</h2>
+
+<div class="first">
+  <p>veg whopper <span class="price">rs.25</span><br />
+  <small>This special all-veg version of the WHOPPER� has been created just for India. The crisp patty is made with 100% vegetables and served in a 5-inch freshly toasted sesame seed bun. The tangy pickles, fresh tomatoes, onions & lettuce, laced with pure-veg mayonnaise and ketchup, complete the taste of the King of burgers. Our advice: hold it with both your hands to eat it. </small></p>
+</div>
+
+<div class="second">
+
+  <p>kid veg combo <span class="price">rs.99</span><br />
+  <small>Say cheese, please. Kids will love this burger with its crunchy veg patty, ketchup and slice of cheese, all layered in a soft and yum sesame-seed bun. The combo is served with fries and a choice of drink � a frozen Ice Bolt, any fountain drink or Tropicana juice.</small></p>
+</div>
+
+<div class="dessert">
+  <p>crispy veg <span class="price">rs.80</span><br />
+  <small>Veg. Crispy batter fried vegetables tossed with Chinese sauce is a very popular and tasty dish. It is like a starter or you can serve it as an evening snack as well. The sweet crispy and tangy taste make it a delightful recipe, which makes everyone love to eat it.</small></p>
+</div>
+
+
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
